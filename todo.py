@@ -1,26 +1,15 @@
 
-#Step 2: Decide How to Store Tasks
-#Use a list of dictionaries in Python.
-#Each dictionary will represent a single task with at least 2 keys:
-#'"task" → the text of the task.
-#"done" → a boolean (True/False).
-#Example in your head:
-#[
- # {"task": "Buy groceries", "done": False},
-  #{"task": "Finish homework", "done": True}
-#]
 
-myTasks = {
-  "task1" : {
-    "task" : "send Email",
-    "done" : True
-  },
-  "task2" : {
-    "task" : "Buy groceries",
-    "done" : False
-  },
-  "task3" : {
-    "task" : "Finish homework",
-    "done" : True
-  }
-}
+#Step 3: Load & Save Functions
+#Create a function to load tasks from tasks.json.
+#Use Python’s json module (json.load) to read it.
+#If the file is empty or missing, return an empty list [].
+#Create a function to save tasks back to tasks.json.
+#Use json.dump to write the updated list of dictionaries.
+import json
+
+# parse x:
+file = "tasks.json"
+
+# the result is a Python dictionary:
+print(file)

@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    {
+      "task": "Email",
+      "done": false
+    },
+    {
+      "task": "Buy groceries",
+      "done": true
+    },
+    {
+      "task": "Finish homework",
+      "done": true
+    }
+
+  ]
+}

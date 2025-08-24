@@ -47,5 +47,11 @@ Add due dates to tasks.
 Sort tasks (incomplete first).
 
 Allow editing existing tasks.
+<img width="1751" height="869" alt="Screenshot 2025-08-24 224255" src="https://github.com/user-attachments/assets/6e2068af-487b-4c20-b27f-c3b983b7dcfc" />
+<img width<img width="1715" height="864" alt="Screenshot 2025-08-24 224351" src="https://github.com/user-attachments/assets/ae43b125-3df7-4f1e-9992-4771e2195414" />
+="1632" height="857" alt="Screenshot 2025-08-24 224318" src="https://github.com/user-attachments/assets/c9f13e5f-05f8-476a-82fe-299d4e906<img width="1723" height="869" alt="Screenshot 2025-08-24 224341" src="https://github.com/user-attachments/assets/f6a3732f-5f9b-4a53-a2d0-b951e289184e" />
+967" />
+
+
 
 Add categories/tags.

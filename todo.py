@@ -1,6 +1,4 @@
 #Step 3: Load & Save Functions
-#Create a function to save tasks back to tasks.json.
-#Use json.dump to write the updated list of dictionaries.
 #import json
 import json
 import os
@@ -14,4 +12,10 @@ def load_tasks():
         with open(file, "r") as f:
             return json.load(f)
     return []
+
+#Create a function to save tasks back to tasks.json.
+#Use json.dump to write the updated list of dictionaries.
+def save_tasks(tasks):
+    with open(file, "w") as f:
+        json.dump(tasks, f)
 

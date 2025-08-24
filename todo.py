@@ -2,7 +2,6 @@
 #import json
 import json
 import os
-#from asyncio import tasks
 
 #Create a function to load tasks from tasks.json.
 #Use Python’s json module (json.load) to read it.
@@ -45,11 +44,17 @@ def main():
             task = input("Enter task: ")
             tasks = add_task(tasks,task)
         elif choice == "3":
-            pass
+            view_tasks(tasks)
+            i = int(input("Enter index of task to mark as done: "))
+            tasks = mark_task(tasks, i)
         elif choice == "4":
-            pass
+            view_tasks(tasks)
+            i = int(input("Enter index of task to delete: "))
+            tasks = rem_task(tasks, i)
         elif choice == "5":
-            pass
+            save_tasks(tasks)  # save one last time
+            print("Goodbye! 👋")
+            break
         else:
             print("invalid choice")
 
@@ -62,11 +67,12 @@ def main():
 #Tip: Use "✔" for True and " " for False.
 def view_tasks(tasks):
     if not tasks:
-        print("no tasks saved")
-        return #indent
+        print("No tasks saved")
+        return
     for i, task in enumerate(tasks, start=1):
-        status = "✔" if done == true else status = " "
-        print(f"{status} {task['title']}")
+        status = "✔" if task["done"] else " "
+        print(f"{i}. [{status}] {task['task']}")
+
 
 #Step 6: Add a Task
 #Ask the user for a task description (input()).
@@ -78,6 +84,49 @@ def view_tasks(tasks):
 def add_task(tasks, task):
     tasks.append({"task":task,"done":False})
     save_tasks(tasks)
-    return print(f"Task {task} added.")
+    print(f"Task {task} added.")
+    return tasks
+
+#Step 7: Mark Task as Done
+#First, show the task list (so the user can see numbers).
+#Ask the user which task number to mark.
+#Convert their input to an index (subtract 1 from the number).
+#Update the dictionary:
+#tasks[index]["done"] = True
+#Save changes.
+
+def mark_task(tasks, i,):
+    ind = i - 1
+    if 0 <= ind < len(tasks):
+        tasks[ind]["done"] = True
+        save_tasks(tasks)
+        print(f"Task '{tasks[ind]['task']}' marked as done.")
+    else:
+        print(f"Task '{tasks[ind]['task']}' not marked as done.")
+    return tasks
+
+#Step 8: Remove a Task
+#Show the task list.
+#Ask which number to remove.
+#Use del tasks[index] or tasks.pop(index).
+#Save changes.
+def rem_task(tasks, i):
+    ind = i - 1
+    if 0 <= ind < len(tasks):
+        removed = tasks.pop(ind)
+        save_tasks(tasks)
+        print(f"Task '{removed['task']}' removed.")
+    else:
+        print("Invalid task number, nothing deleted.")
+    return tasks
 
 
+#Step 9: Exit
+#When the user chooses Exit, save tasks one last time (just in case).
+#Break out of the loop.
+
+     
+
+#check check
+if __name__ == "__main__":
+    main()

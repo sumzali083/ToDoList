@@ -1,17 +1,1 @@
-{
-  "tasks": [
-    {
-      "task": "Email",
-      "done": false
-    },
-    {
-      "task": "Buy groceries",
-      "done": true
-    },
-    {
-      "task": "Finish homework",
-      "done": true
-    }
-
-  ]
-}
+[{"task": "Buy groceries", "done": true}, {"task": "Finish homework", "done": true}, {"task": "finish coding", "done": false}]
